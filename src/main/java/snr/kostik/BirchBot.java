@@ -16,7 +16,7 @@ public class BirchBot {
         jdaBuilder
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_EXPRESSIONS)
                 .setStatus(OnlineStatus.DO_NOT_DISTURB)
-                .setActivity(Activity.playing("В ЗБД"))
+                .setActivity(Activity.playing("Зону Березовых Домов"))
                 .addEventListeners(new ReadyEventListener(), new MessageEventListener(), new EmoteList())
                 .build();
     }

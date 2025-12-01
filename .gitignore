@@ -37,6 +37,8 @@ build/
 ### Mac OS ###
 .DS_Store
 
-Secret.java
-/src/main/java/snr/kostik/lists/ChannelList.java
-/src/main/java/snr/kostik/lists/EmoteList.java
+
+.env
+
+#compiled project
+birch-bot

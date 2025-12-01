@@ -8,11 +8,26 @@ import (
 	"syscall"
 
 	"github.com/snrKostik/birch-bot/handlers"
-	_ "github.com/snrKostik/birch-bot/handlers"
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/joho/godotenv"
 )
+
+func goEnvVar(key string) string {
+	err := godotenv.Load(key)
+	if err != nil {
+		fmt.Printf("cant load key %s : %s", key, err)
+	}
+
+	return key
+}
+func initBot(token string) *discordgo.Session {
+	dg, err := discordgo.New("Bot " + token)
+	if err != nil {
+		fmt.Printf("cant create session: %s", err)
+	}
+	return dg
+}
 
 func main() {
 	token := goEnvVar("DISCORD_BOT_TOKEN")
